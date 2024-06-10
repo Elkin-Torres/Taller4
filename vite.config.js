@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "https://elkin-torres.github.io/TallerSemana4/",
+  base: "https://elkin-torres.github.io/Taller4/",
   plugins: [react()],
 });
