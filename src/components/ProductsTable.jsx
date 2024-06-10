@@ -11,30 +11,32 @@ function ProductsTable() {
   };
   return (
     <>
-      <table className="table">
-        <thead>
-          <tr>
-            <th>ID producto</th>
-            <th>Descripción</th>
-            <th>Valor Unitario</th>
-            <th>Cantidad</th>
-            <th>Subtotal</th>
-            <th>Acción</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((product, index) => (
-            <ProductsInTable
-              key={index}
-              productId={product.productId}
-              description={product.description}
-              unitValue={product.unitValue}
-              quantity={product.quantity}
-              ondelete={handleDelete}
-            />
-          ))}
-        </tbody>
-      </table>
+      <div className="table-responsive p-5">
+        <table className="table">
+          <thead>
+            <tr>
+              <th className="text-center">ID producto</th>
+              <th className="text-center">Descripción</th>
+              <th className="text-center">Valor Unitario</th>
+              <th className="text-center">Cantidad</th>
+              <th className="text-center">Subtotal</th>
+              <th className="text-center">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product, index) => (
+              <ProductsInTable
+                key={index}
+                productId={product.productId}
+                description={product.description}
+                unitValue={product.unitValue}
+                quantity={product.quantity}
+                ondelete={handleDelete}
+              />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
